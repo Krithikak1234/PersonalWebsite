@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bio-data</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+    body {
+    background:#D5E2D2;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+        nav {
+            background: #405A43;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+    background-color: #E5F0F7;
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(70,100,70,0.2);
+}
+
+        h1 {
+            text-align: center;
+            color: #344B38;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color:#344B38;
+            border-bottom: 2px solid #405A43;
+            padding-bottom: 8px;
+            margin: 25px 0 15px;
+        }
+
+        .details p {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            line-height: 1.5;
+        }
+
+        .details strong {
+            display: inline-block;
+            width: 170px;
+            color: #344B38;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #172b4d;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 25px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #E8F0E5;
+        }
+
+        footer {
+            background: #172b4d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        @media(max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .container {
+                margin: 20px 12px;
+                padding: 20px;
+            }
+
+            .details strong {
+                width: auto;
+                display: block;
+            }
+        }
+
+        @media print {
+            nav, footer, .btn {
+                display: none;
+            }
+
+            .container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2 style="color:white; border:none; margin:0; padding:0;">
+            MY PORTFOLIO
+        </h2>
+
+        <a href="indx.html">Home</a>
+    </nav>
+
+    <div class="container">
+
+        <h1>MY BIO-DATA</h1>
+        <div style="text-align:center; margin-bottom:25px;">
+    <img src="image.jpg"
+         alt="My Photo"
+         width="150"
+         height="170"
+         style="border-radius:10px; object-fit:cover;">
+</div>
+
+        <div class="details">
+
+            <p><strong>Name:</strong> K Krithika</p>
+
+            <p><strong>Date of Birth:</strong> 13/09/2006</p>
+
+            <p><strong>Gender:</strong> Female</p>
+
+            <p><strong>Nationality:</strong> Indian</p>
+
+            <p><strong>Address:</strong> Patlamoole house,kedambady,puttur</p>
+
+            <p><strong>Email:</strong> kkrithika526@gmail.com</p>
+
+            <p><strong>Phone Number:</strong> 8296847898</p>
+
+            <p><strong>Languages Known:</strong> English, Kannada, Hindi</p>
+
+            <p><strong>Hobbies:</strong> Reading, Music, Drawing, Crafts</p>
+
+        </div>
+       <h2>Family Details</h2>
+
+       <div class="details">
+
+    <p><strong>Father's Name:</strong> K Krishna Kumara Upadhyaya</p>
+
+    <p><strong>Mother's Name:</strong> Anupama K</p>
+
+    <p><strong>Father's Occupation:</strong> Agriculturist</p>
+
+    <p><strong>Mother's Occupation:</strong> Home Maker</p>
+
+    <p><strong>Sibling's Name:</strong> Akshatha K </p>
+    
+
+       </div>
+
+        <a href="indx.html" class="btn">Back to Home</a>
+
+        <button class="btn" onclick="window.print()">
+            Print Bio-data
+        </button>
+
+    </div>
+
+    <footer>
+        <p>© 2026 My Personal Website</p>
+    </footer>
+
+</body>
+</html>

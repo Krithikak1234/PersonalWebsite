@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #eef0f8;
+            color: #333;
+            font-family:Arial, sans-serif;
+        }
+
+        /* Navigation bar */
+        nav {
+            background: #172b4d;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #61dafb;
+        }
+
+        /* Home section */
+        .home {
+            text-align: center;
+            padding: 90px 20px 60px;
+        }
+
+        .home h1 {
+            font-size: 38px;
+            color: #172b4d;
+            margin-bottom: 15px;
+        }
+
+        .home p {
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* Clickable boxes */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px 20px 25px;
+    flex-wrap: wrap;
+}
+.card {
+    width: 170px;
+    padding: 8px 12px;
+    background: #EBCBB5;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card .symbol,
+.card p,
+.card span {
+    display: none;
+}
+
+.card h2 {
+    color: #654332;
+    font-size: 17px;
+    margin: 0;
+}
+        .card p {
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+ .card span {
+    background: #172b4d;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+        /* Resume section */
+#resume {
+    display: none;
+    background: #E5DCF3;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(85,68,119,0.2);
+}
+
+        #resume h1 {
+            text-align: center;
+            color:#554477;
+            margin-bottom: 25px;
+        }
+
+        #resume h2 {
+            color: #554477;
+            border-bottom: 2px solid #172b4d;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+        }
+
+        #resume p, #resume li {
+            line-height: 1.8;
+        }
+
+        #resume ul {
+            padding-left: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #554477;
+            color: white;
+        }
+
+        .back {
+            display: inline-block;
+            background: #554477;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 25px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #172b4d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        @media(max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .home h1 {
+                font-size: 28px;
+            }
+
+            #resume {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
+
+        @media print {
+            nav, footer, .home, .options, .back {
+                display: none !important;
+            }
+
+            #resume {
+                display: block !important;
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 5px 15px rgba(101,67,50,0.25);
+    margin-bottom: 35px;
+}
+
+.intro-box {
+    background: #F3DCCB;
+    max-width: 750px;
+    margin: 0 auto 15px;
+    padding: 25px 30px;
+    border-radius: 15px;
+    border: 1px solid #F0D5C2;
+    box-shadow: 0 4px 15px rgba(101,67,50,0.10);
+    line-height: 1.8;
+    font-size: 19px;
+    text-align: center;
+}
+</style>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>MY PERSONAL INFO</h2>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="biodata.html">Bio-data</a>
+        </div>
+    </nav>
+
+    <!-- Home page introduction -->
+    <section class="home" id="home">
+        <h1>Welcome to My Personal Website!</h1>
+  <div style="text-align: center; margin-bottom: 20px;">
+        <img src="image.jpg"
+     alt="My Photo"
+     class="profile-photo">
+</div>
+<div class="intro-box">
+        <p>
+            Hello! I am <b>K Krithika</b>, a Computer Science
+            Engineering student studing in Vivekanada Engineering college .
+
+            Explore my website to know more about my
+            educational qualifications, technical skills
+            and personal information.
+        </p>
+</div>
+    </section>
+
+    <!-- Two clickable boxes -->
+    <section class="options" id="options">
+
+        <a href="#resume" class="card" onclick="showResume()">
+            <div class="symbol">📄</div>
+            <h2>My Resume</h2>
+
+            <p>
+                View my educational qualifications,
+                technical skills, projects and achievements.
+            </p>
+
+            <span>View Resume</span>
+        </a>
+
+        <a href="biodata.html" class="card">
+            <div class="symbol">👤</div>
+            <h2>My Bio-data</h2>
+
+            <p>
+                View my personal details, hobbies,
+                languages and other information.
+            </p>
+
+            <span>View Bio-data</span>
+        </a>
+
+    </section>
+
+    <!-- Resume content -->
+    <section id="resume">
+
+        <h1>MY RESUME</h1>
+  <div style="text-align: center; margin-bottom: 20px;">
+        <img src="image.jpg"
+     alt="My Photo"
+     width="130"
+     height="150"
+     style="border-radius:10px; object-fit:cover;">
+          <h1 style="margin-top: 15px; margin-bottom: 8px;">
+        K Krithika
+    </h1>
+
+    <p style="margin: 5px;">
+        Email: kkrithika526@gmail.com ,   Phone: 8296845898 </p> 
+</div>
+       
+
+        <h2>Career Objective</h2>
+
+        <p>
+            To obtain an opportunity where I can apply my
+            knowledge and technical skills, learn new
+            technologies and contribute to the growth
+            of an organization.
+        </p>
+
+        <h2>Educational Qualifications</h2>
+
+        <table>
+            <tr>
+                <th>Qualification</th>
+                <th>Institution</th>
+                <th>Year</th>
+            </tr>
+
+            <tr>
+                <td>B.E. Computer Science</td>
+                <td>Vivekanada college of Engeeniering and Technology,Neharu nagara,Puttur</td>
+                <td>2024-2028</td>
+            </tr>
+
+            <tr>
+                <td>PUC</td>
+                <td>Vivekanada PU college,Neharu Nagara,Puttur</td>
+                <td>2022-2024</td>
+            </tr>
+
+            <tr>
+                <td>SSLC</td>
+                <td>Sandeepani Rural Educational Institution,Narimogaru,Puttur</td>
+                <td>2021-2022</td>
+            </tr>
+        </table>
+
+        <h2>Technical Skills</h2>
+
+        <ul>
+            <li>C Programming</li>
+            <li>C++ Programming</li>
+            <li>Python</li>
+        </ul>
+
+        <h2>Projects</h2>
+
+        <h3>Smart Classroom Energy Management</h3>
+
+        <p>
+            A project aimed at reducing electricity wastage
+            using sensors and automated control of
+            classroom lights and fans.
+        </p>
+
+        <h2>Personal Strengths</h2>
+
+        <ul>
+            <li>Teamwork</li>
+            <li>Problem Solving</li>
+            <li>Quick Learning</li>
+            <li>Communication Skills</li>
+        </ul>
+        <button class="back" onclick="window.print()">
+            Print Resume
+        </button>
+
+        <button class="back" onclick="goHome()">
+            Back to Home
+        </button>
+
+    </section>
+
+    <footer>
+        <p>© 2026 My Personal Website</p>
+    </footer>
+
+    <script>
+
+        // Display resume when Resume box is clicked
+        function showResume() {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("options").style.display = "none";
+            document.getElementById("resume").style.display = "block";
+        }
+
+        // Return to home page
+        function goHome() {
+            document.getElementById("resume").style.display = "none";
+            document.getElementById("home").style.display = "block";
+            document.getElementById("options").style.display = "flex";
+        }
+
+    </script>
+
+</body>
+</html>
